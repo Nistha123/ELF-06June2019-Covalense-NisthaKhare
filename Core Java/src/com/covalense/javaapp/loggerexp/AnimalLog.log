@@ -1,0 +1,6 @@
+Jun 17, 2019 12:31:13 PM com.Nistha.TestAnimalLog main
+SEVERE: Hi,it's a SEVERE message of Animal
+Jun 17, 2019 12:31:13 PM com.Nistha.TestAnimalLog main
+WARNING: Hi,it's a WARNING message of Animal
+Jun 17, 2019 12:31:13 PM com.Nistha.TestAnimalLog main
+INFO: Hi,it's a INFO message of Animal

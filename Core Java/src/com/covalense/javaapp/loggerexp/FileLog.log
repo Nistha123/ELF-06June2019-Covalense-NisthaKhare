@@ -1,0 +1,56 @@
+Jun 17, 2019 12:05:00 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:05:00 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:05:58 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:05:58 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:06:00 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:06:00 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+WARNING: Hi,it's a WARNING message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+INFO: Hi,it's a INFO message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+CONFIG: Hi,it's a CONFIG message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+FINE: Hi,it's a FINE message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+FINER: Hi,it's a FINER message
+Jun 17, 2019 12:07:52 PM com.Nistha.TestB main
+FINEST: Hi,it's a FINEST message
+Jun 17, 2019 12:07:52 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:07:52 PM com.Nistha.BuyProduct buy
+WARNING: Hi,it's a Warning message in buy method
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+WARNING: Hi,it's a WARNING message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+INFO: Hi,it's a INFO message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+CONFIG: Hi,it's a CONFIG message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+FINE: Hi,it's a FINE message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+FINER: Hi,it's a FINER message
+Jun 17, 2019 12:07:53 PM com.Nistha.TestB main
+FINEST: Hi,it's a FINEST message
+Jun 17, 2019 12:07:53 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:07:53 PM com.Nistha.BuyProduct buy
+WARNING: Hi,it's a Warning message in buy method
+Jun 17, 2019 12:08:14 PM com.Nistha.TestB main
+SEVERE: Hi,it's a SEVERE message
+Jun 17, 2019 12:08:14 PM com.Nistha.TestB main
+WARNING: Hi,it's a WARNING message
+Jun 17, 2019 12:08:14 PM com.Nistha.BuyProduct buy
+SEVERE: Hi,it's a SEVERE message in buy method
+Jun 17, 2019 12:08:14 PM com.Nistha.BuyProduct buy
+WARNING: Hi,it's a Warning message in buy method
