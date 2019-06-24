@@ -1,0 +1,327 @@
+                                   **************** DATABASE ******************
+
+ 1.CREATE DATABASE - create database database_name;
+ 2.USE DATABASE - use database_name;
+ 3.CREATE TABLE - create table table_name(col1 datatype , col2 datatype ......);  
+
+
+                   
+                                     ***************** DQL ******************
+
+1. SELECT - To select or retrieve the columns and values from a table.
+eg : Select * FROM table_name ;
+     Select Id, Name, Salary from table_name;
+
+2. INSERT - To insert values in a table.
+eg : Insert table_name(id, name, Salary) values(1,'nistha',4444444989);
+
+3. ALTER - To change and add a column name in a table
+eg : alter table table_name change prev_col_name change_col_name datatype ;
+
+4. Update - To update records in a table
+eg : Update table_name set col_name=value where Id=8zs ;
+
+4. Delete - To delete records in a table
+eg : delet from table_name where Id=7 ;
+
+5. Truncate - To delete records in a table but it will not delete the structure.
+
+===============================================================================================================
+
+==>DDL - Data Definition Language 
+	* Alter
+	* Drop
+	* Rename
+	* Create
+
+==>DML - Data Manipulation Language 
+	* Insert
+	* Update
+	* Delete
+
+******************* ALIAS *******************
+
+Alias are the temporary name given to the table or column for easy readability.
+
+eg : (a) Select col_name AS col_alias_name from table_name.
+				OR
+	  Select col_name col_alias_name from table_name.
+
+     (b) Select col_name from table_name AS table_alias_name
+
+****************** DISTINCT ******************
+
+It is used to select only distinct values.
+
+eg : SELECT DISTINCT deptNo FROM Table_name;
+     
+     SELECT COUNT(DISTINCT deptNo) FROM Table_name;
+
+DISTINCT TWO COL ---->
+
+select distinct dept_no, email from employee;
++---------+------------------------+
+| dept_no | email                  |
++---------+------------------------+
+|     201 | nistha.khare@gmail.com |
+|     202 | reetu@gmail.com        |
+|     203 | Shiv@gmail.com         |
+|     204 | Girish@gmail.com       |
+|     205 | Sayali@gmail.com       |
+|     206 | Niharikaq@gmail.com    |
+|     206 | rohan@gmail.com        |
++---------+------------------------+
+
+
+****************** OPERATORS ******************
+
+a) Arithmetic Operators --> +, - , * , / , % 
+
+eg : Select Id, First_name, salary sal, salary+10000 as Increment from employee;
++----+------------+-------+-----------+
+| Id | First_name | sal   | Increment |
++----+------------+-------+-----------+
+|  1 | Nistha     | 30000 |     40000 |
+|  2 | Reetu      | 24000 |     34000 |
+|  3 | Shiv       | 40000 |     50000 |
+|  4 | Girish     | 35000 |     45000 |
+|  5 | Sayali     | 20000 |     30000 |
+|  6 | niharika   | 50000 |     60000 |
+|  7 | Rohan      |  5000 |     15000 |
++----+------------+-------+-----------+
+
+===========================================================================================================
+
+b) Comparison Operator --> =,!= , > , < , >= , <=
+
+eg :  Select * from employee where salary>=10000;
++----+------------+------------+--------+-------------+---------+------------------------+
+| Id | First_Name | last_Name  | salary | Job         | Dept_No | Email                  |
++----+------------+------------+--------+-------------+---------+------------------------+
+|  1 | Nistha     | Khare      |  30000 | Jr.Engineer |     201 | nistha.khare@gmail.com |
+|  2 | Reetu      | Sharma     |  24000 | Sr.Engineer |     202 | reetu@gmail.com        |
+|  3 | Shiv       | Prasad     |  40000 | Manager     |     203 | Shiv@gmail.com         |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer |     204 | Girish@gmail.com       |
+|  5 | Sayali     | Thakur     |  20000 | Architect   |     205 | Sayali@gmail.com       |
+|  6 | niharika   | Srivastava |  50000 | Team Leader |     206 | Niharikaq@gmail.com    |
++----+------------+------------+--------+-------------+---------+------------------------+
+
+============================================================================================================
+
+Here "<=>" will check only "NULL" values that if any record is null
+
+eg :  select * from employee where salary <=> null;
+
++----+------------+-----------+--------+----------+---------+------------------+
+| Id | First_Name | last_Name | salary | Job      | Dept_No | Email            |
++----+------------+-----------+--------+----------+---------+------------------+
+|  8 | Shruti     | nigam     |   NULL | engineer |     203 | shruti@gmail.com |
++----+------------+-----------+--------+----------+---------+------------------+
+
+============================================================================================================
+
+b) Logical Operator --> AND , OR , NOT
+
+eg :  select * from employee where salary>10000 AND job='software developer';
+
++----+------------+-----------+--------+--------------------+---------+-----------------+
+| Id | First_Name | last_Name | salary | Job                | Dept_No | Email           |
++----+------------+-----------+--------+--------------------+---------+-----------------+
+|  7 | Rohan      | Rao       |  15000 | software developer |     206 | rohan@gmail.com |
++----+------------+-----------+--------+--------------------+---------+-----------------+
+
+ select * from employee where NOT job='software developer';
+
++----+------------+------------+--------+-------------+---------+------------------------+
+| Id | First_Name | last_Name  | salary | Job         | Dept_No | Email                  |
++----+------------+------------+--------+-------------+---------+------------------------+
+|  1 | Nistha     | Khare      |  30000 | Jr.Engineer |     201 | nistha.khare@gmail.com |
+|  2 | Reetu      | Sharma     |  24000 | Sr.Engineer |     202 | reetu@gmail.com        |
+|  3 | Shiv       | Prasad     |  40000 | Manager     |     203 | Shiv@gmail.com         |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer |     204 | Girish@gmail.com       |
+|  5 | Sayali     | Thakur     |  20000 | Architect   |     205 | Sayali@gmail.com       |
+|  6 | niharika   | Srivastava |  50000 | Team Leader |     206 | Niharikaq@gmail.com    |
+|  8 | Shruti     | nigam      |   NULL | engineer    |     203 | shruti@gmail.com       |
++----+------------+------------+--------+-------------+---------+------------------------+
+
+============================================================================================================
+
+
+c) Special Operator -->
+	
+	(i) IN - Evaluating multiple values.
+
+eg - Select * from employee where job in('Software Developer', 'QA Engineer', 'Architect');
+
++----+------------+-----------+--------+--------------------+---------+------------------+
+| Id | First_Name | last_Name | salary | Job                | Dept_No | Email            |
++----+------------+-----------+--------+--------------------+---------+------------------+
+|  4 | Girish     | Bhandari  |  35000 | QA Engineer        |     204 | Girish@gmail.com |
+|  5 | Sayali     | Thakur    |  20000 | Architect          |     205 | Sayali@gmail.com |
+|  7 | Rohan      | Rao       |  15000 | software developer |     206 | rohan@gmail.com  |
++----+------------+-----------+--------+--------------------+---------+------------------+
+
+	(ii) BETWEEN - Searching based on range of values.
+
+eg -  select * from employee where salary between 10000 and 30000;
+
++----+------------+-----------+--------+--------------------+---------+------------------------+
+| Id | First_Name | last_Name | salary | Job                | Dept_No | Email                  |
++----+------------+-----------+--------+--------------------+---------+------------------------+
+|  1 | Nistha     | Khare     |  30000 | Jr.Engineer        |     201 | nistha.khare@gmail.com |
+|  2 | Reetu      | Sharma    |  24000 | Sr.Engineer        |     202 | reetu@gmail.com        |
+|  5 | Sayali     | Thakur    |  20000 | Architect          |     205 | Sayali@gmail.com       |
+|  7 | Rohan      | Rao       |  15000 | software developer |     206 | rohan@gmail.com        |
++----+------------+-----------+--------+--------------------+---------+------------------------+
+
+
+	(iii) NOT IN - Used for not evaluating multiple values.
+
+eg - Select * from employee where salary not IN(30000,40000);
+
++----+------------+------------+--------+--------------------+---------+---------------------+
+| Id | First_Name | last_Name  | salary | Job                | Dept_No | Email               |
++----+------------+------------+--------+--------------------+---------+---------------------+
+|  2 | Reetu      | Sharma     |  24000 | Sr.Engineer        |     202 | reetu@gmail.com     |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer        |     204 | Girish@gmail.com    |
+|  5 | Sayali     | Thakur     |  20000 | Architect          |     205 | Sayali@gmail.com    |
+|  6 | niharika   | Srivastava |  50000 | Team Leader        |     206 | Niharikaq@gmail.com |
+|  7 | Rohan      | Rao        |  15000 | software developer |     206 | rohan@gmail.com     |
++----+------------+------------+--------+--------------------+---------+---------------------+
+
+	(iv) NOT BETWEEN - Used for not Searching based on range of values.
+
+eg - Select * from employee where salary not BETWEEN 10000 AND 30000;
++----+------------+------------+--------+-------------+---------+---------------------+
+| Id | First_Name | last_Name  | salary | Job         | Dept_No | Email               |
++----+------------+------------+--------+-------------+---------+---------------------+
+|  3 | Shiv       | Prasad     |  40000 | Manager     |     203 | Shiv@gmail.com      |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer |     204 | Girish@gmail.com    |
+|  6 | niharika   | Srivastava |  50000 | Team Leader |     206 | Niharikaq@gmail.com |
++----+------------+------------+--------+-------------+---------+---------------------+
+
+	(iv) IS - Used to check for NULL values.
+
+eg - select * from employee where salary is null;
++----+------------+-----------+--------+----------+---------+------------------+
+| Id | First_Name | last_Name | salary | Job      | Dept_No | Email            |
++----+------------+-----------+--------+----------+---------+------------------+
+|  8 | Shruti     | nigam     |   NULL | engineer |     203 | shruti@gmail.com |
++----+------------+-----------+--------+----------+---------+------------------+
+
+	(iv) LIKE - Used for pattern matching.
+
+eg - => select * from employee where First_Name like 'r%';
++----+------------+-----------+--------+--------------------+---------+-----------------+
+| Id | First_Name | last_Name | salary | Job                | Dept_No | Email           |
++----+------------+-----------+--------+--------------------+---------+-----------------+
+|  2 | Reetu      | Sharma    |  24000 | Sr.Engineer        |     202 | reetu@gmail.com |
+|  7 | Rohan      | Rao       |  15000 | software developer |     206 | rohan@gmail.com |
++----+------------+-----------+--------+--------------------+---------+-----------------+
+
+  => select * from employee where First_Name like 'a%n';
++----+------------+-----------+--------+-------+---------+----------------+
+| Id | First_Name | last_Name | salary | Job   | Dept_No | Email          |
++----+------------+-----------+--------+-------+---------+----------------+
+|  9 | aman       | rao       |  10000 | clerk |     205 | aman@gmail.com |
++----+------------+-----------+--------+-------+---------+----------------+
+
+  => select * from employee where First_Name like 'a%' or  First_Name like 's%';
++----+------------+-----------+--------+-----------+---------+------------------+
+| Id | First_Name | last_Name | salary | Job       | Dept_No | Email            |
++----+------------+-----------+--------+-----------+---------+------------------+
+|  3 | Shiv       | Prasad    |  40000 | Manager   |     203 | Shiv@gmail.com   |
+|  5 | Sayali     | Thakur    |  20000 | Architect |     205 | Sayali@gmail.com |
+|  8 | Shruti     | nigam     |   NULL | engineer  |     203 | shruti@gmail.com |
+|  9 | aman       | rao       |  10000 | clerk     |     205 | aman@gmail.com   |
++----+------------+-----------+--------+-----------+---------+------------------+
+
+ => QUERY TO SELECT NAME HAVE ATLEAST % CHARACTERS IN IT --->
+
+ select * from employee where First_Name like '%_____%';
++----+------------+------------+--------+--------------------+---------+------------------------+
+| Id | First_Name | last_Name  | salary | Job                | Dept_No | Email                  |
++----+------------+------------+--------+--------------------+---------+------------------------+
+|  1 | Nistha     | Khare      |  30000 | Jr.Engineer        |     201 | nistha.khare@gmail.com |
+|  2 | Reetu      | Sharma     |  24000 | Sr.Engineer        |     202 | reetu@gmail.com        |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer        |     204 | Girish@gmail.com       |
+|  5 | Sayali     | Thakur     |  20000 | Architect          |     205 | Sayali@gmail.com       |
+|  6 | niharika   | Srivastava |  50000 | Team Leader        |     206 | Niharikaq@gmail.com    |
+|  7 | Rohan      | Rao        |  15000 | software developer |     206 | rohan@gmail.com        |
+|  8 | Shruti     | nigam      |   NULL | engineer           |     203 | shruti@gmail.com       |
++----+------------+------------+--------+--------------------+---------+------------------------+
+
+=> QUERY TO SELECT NAME HAVE NOT START WITH R CHARACTER --->
+
+ select * from employee where First_Name not like 'r%';
++----+------------+------------+--------+-------------+---------+------------------------+
+| Id | First_Name | last_Name  | salary | Job         | Dept_No | Email                  |
++----+------------+------------+--------+-------------+---------+------------------------+
+|  1 | Nistha     | Khare      |  30000 | Jr.Engineer |     201 | nistha.khare@gmail.com |
+|  3 | Shiv       | Prasad     |  40000 | Manager     |     203 | Shiv@gmail.com         |
+|  4 | Girish     | Bhandari   |  35000 | QA Engineer |     204 | Girish@gmail.com       |
+|  5 | Sayali     | Thakur     |  20000 | Architect   |     205 | Sayali@gmail.com       |
+|  6 | niharika   | Srivastava |  50000 | Team Leader |     206 | Niharikaq@gmail.com    |
+|  8 | Shruti     | nigam      |   NULL | engineer    |     203 | shruti@gmail.com       |
+|  9 | aman       | rao        |  10000 | clerk       |     205 | aman@gmail.com         |
++----+------------+------------+--------+-------------+---------+------------------------+
+
+
+
+		          ****************** FUNCTIONS ******************
+
+  (i) Aggregate Functions - 
+   
+      (a) AVG() - 
+  
+ select id , first_name , avg(salary) average from employee;
+
++----+------------+------------+
+| id | first_name | average    |
++----+------------+------------+
+|  1 | Nistha     | 28000.0000 |
++----+------------+------------+
+
+      (b) COUNT() - 
+
+ select count(salary) from employee;
++---------------+
+| count(salary) |
++---------------+
+|             8 |
++---------------+
+
+
+      (c) MAX() - 
+
+select max(salary) from employee;
++-------------+
+| max(salary) |
++-------------+
+|       50000 |
++-------------+
+
+
+      (d) MIN() -
+
+ select min(salary) from employee;
++-------------+
+| min(salary) |
++-------------+
+|       10000 |
++-------------+
+
+
+      (a) SUM() -  
+
+select sum(salary) from employee;
++-------------+
+| sum(salary) |
++-------------+
+|      224000 |
++-------------+
+
+
+
+===============================================================================================================
+	
