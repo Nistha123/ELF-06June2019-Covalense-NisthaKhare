@@ -1,11 +1,14 @@
 package com.covalense.javaapp.assignmentsix;
 
+import lombok.extern.java.Log;
+
 /* USE CASE :
  * ProgramOne is a main test class 
  * to calculate sum using lambda expression
  */
 
 //SOLUTION :
+@Log
 public class ProgramOne {
 	
 	public static void main(String[] args) {
@@ -16,7 +19,7 @@ public class ProgramOne {
 		
 		int add = i.sum(10, 20);
 		
-		System.out.println("sum of two numbers is :" + add);
+		log.info("sum of two numbers is :" + add);
 	}//End Of main
 
 }//End Of class

@@ -27,7 +27,6 @@ public class ProgramFive {
 		};
 
 		int r = i.range(10, 20);
-		// System.out.println("numbers are :"+r);
 
 	} //end of main
 } //end of class

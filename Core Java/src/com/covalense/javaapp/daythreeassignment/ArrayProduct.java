@@ -13,7 +13,7 @@ public class ArrayProduct {
 
 	void store(Product p[])
 	{
-		System.out.println("************ Product detail***********");
+		log.info("************ Product detail***********");
 
 		for(int i=0 ; i<p.length ; i++) {
 			log.info("Product Id is " + p[i].getProductId());

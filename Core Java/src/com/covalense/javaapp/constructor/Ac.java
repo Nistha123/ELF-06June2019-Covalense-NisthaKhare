@@ -1,9 +1,12 @@
 package com.covalense.javaapp.constructor;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Ac {
 
 	Ac()
 	{
-		System.out.println("Constructor is called");
+		log.info("Constructor is called");
 	}
 }

@@ -9,12 +9,10 @@ public class Gun {
 	
 	int bullet;
 
-	public Gun() {
-		bullet = 10;
-		
-		System.out.println("Bullets :" + bullet);
+	public Gun(int i) {
+		bullet = i;		
+	//	System.out.println("Bullets :" + bullet);
 	}//end of method
-	
 	
 
 }//end of class

@@ -1,17 +1,20 @@
 package com.covalense.javaapp.interfaceexample;
 
+import lombok.extern.java.Log;
+
+@Log
 public class HDFC implements ATM{
 
 	@Override
 	public void validate() {
 
-		System.out.println("Validating HDFC card");
+		log.info("Validating HDFC card");
 	}
 
 	@Override
 	public void getInfo() {
 
-		System.out.println("Getting HDFC bank information");
+		log.info("Getting HDFC bank information");
 	}
 
 }

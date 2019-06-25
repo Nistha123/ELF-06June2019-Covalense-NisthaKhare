@@ -1,15 +1,18 @@
 package com.covalense.javaapp.interfaceexample;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ICICI implements ATM {
 
 	public void validate() {
 		
-		System.out.println("validating ICICI card");
+		log.info("validating ICICI card");
 	}
 
 	@Override
 	public void getInfo() {
 
-		System.out.println("Getting ICICI bank information");
+		log.info("Getting ICICI bank information");
 	}
 }

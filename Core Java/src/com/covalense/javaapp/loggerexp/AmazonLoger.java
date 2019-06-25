@@ -7,8 +7,6 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import javax.swing.text.SimpleAttributeSet;
-
 
 public class AmazonLoger {
 	
@@ -35,7 +33,8 @@ public class AmazonLoger {
 			
 			
 		} catch (SecurityException | IOException e) {
-			e.printStackTrace();
+			
+			loger.severe(e.getMessage());
 		}
 	}
 

@@ -2,6 +2,9 @@ package com.covalense.javaapp.collection;
 
 import java.util.ArrayList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ArrayListTest {
 	public static void main(String[] args) {
 
@@ -18,7 +21,7 @@ public class ArrayListTest {
 
 			Object o = al.get(i);
 
-			System.out.println(o);
+			log.info(""+o);
 		}
 	}
 

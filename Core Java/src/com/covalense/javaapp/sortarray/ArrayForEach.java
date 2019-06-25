@@ -1,5 +1,8 @@
 package com.covalense.javaapp.sortarray;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ArrayForEach {
 
 	public static void main(String[] args) {
@@ -10,17 +13,17 @@ public class ArrayForEach {
 		
 		for (String s : c) {
 			
-			System.out.println("string is " + s);
+			log.info("string is " + s);
 		}
 		
 		for (int i : a) {
 			
-			System.out.println("Int Number is " + i);
+			log.severe("Int Number is " + i);
 		}
 		
 		for (double d : b) {
 			
-			System.out.println("Double number is " + d);
+			log.severe("Double number is " + d);
 		}
 	}
 

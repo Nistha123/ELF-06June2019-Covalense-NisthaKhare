@@ -3,6 +3,9 @@ package com.covalense.javaapp.collection;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ArrayListTest3 {
 	
 public static void main(String[] args) {
@@ -39,10 +42,10 @@ public static void main(String[] args) {
 		
 		while(i.hasNext()) {
 			Student sa = i.next();
-			System.out.println("******************Student details*************");
-			System.out.println(sa.id);
-			System.out.println(sa.name);
-			System.out.println(sa.percent);
+			log.info("******************Student details*************");
+			log.info("" + sa.id);
+			log.info("" + sa.name);
+			log.info("" + sa.percent);
 			
 		}
 			

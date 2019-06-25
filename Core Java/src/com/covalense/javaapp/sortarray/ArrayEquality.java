@@ -1,5 +1,8 @@
 package com.covalense.javaapp.sortarray;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ArrayEquality {
 
 	public static void main(String[] args) {
@@ -19,9 +22,9 @@ public class ArrayEquality {
 		}
 
 		if (equal) {
-			System.out.println("Arrays are equal");
+			log.severe("Arrays are equal");
 		} else {
-			System.out.println("Arrays are not equal");
+			log.severe("Arrays are not equal");
 		}
 
 	}

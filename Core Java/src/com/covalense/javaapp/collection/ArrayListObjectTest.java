@@ -2,6 +2,9 @@ package com.covalense.javaapp.collection;
 
 import java.util.ArrayList;
 
+import lombok.extern.java.Log;
+
+@Log
 public class ArrayListObjectTest {
 	
 	public static void main(String[] args) {
@@ -37,10 +40,10 @@ public class ArrayListObjectTest {
 			
 		Student sa = al.get(i);
 		
-		System.out.println("Name is :" + sa.id);
-		System.out.println("Id is :" + sa.name);
-		System.out.println("Percent is :" + sa.percent);
-		System.out.println("*****************************************");
+		log.info("Name is :" + sa.id);
+		log.info("Id is :" + sa.name);
+		log.info("Percent is :" + sa.percent);
+		log.info("*****************************************");
 			
 		}
 	}
