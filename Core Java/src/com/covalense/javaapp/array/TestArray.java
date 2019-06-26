@@ -1,5 +1,15 @@
 package com.covalense.javaapp.array;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestArray is a main class to store the
+ * array of type double
+ * 
+ */
+
+//SOLUTION :
+@Log
 public class TestArray {
 
 	public static void main(String[] args) {
@@ -10,10 +20,10 @@ public class TestArray {
 		a[2]=33.3;
 		a[3]=44.4;
 		
-		System.out.println(a.length);
+		log.info(""+a.length);
 		for(int i=0 ; i<=a.length ; i++)
 		{
-			System.out.println(a[i]);
+			log.info(""+a[i]);
 		}
 	}//End of main
 

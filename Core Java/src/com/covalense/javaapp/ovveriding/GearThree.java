@@ -1,9 +1,18 @@
 package com.covalense.javaapp.ovveriding;
 
-public class GearThree extends GearTwo{
+import lombok.extern.java.Log;
 
-	void speed()
-	{
-		System.out.println("Speed at Gear three is between 200-300");
+/* USE CASE :
+ * GearThree is a class 
+ * and have a speed method
+ * 
+ */
+
+//SOLUTION :
+@Log
+public class GearThree extends GearTwo {
+
+	void speed() {
+		log.info("Speed at Gear three is between 200-300");
 	}
 }

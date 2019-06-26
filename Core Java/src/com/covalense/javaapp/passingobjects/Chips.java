@@ -1,5 +1,12 @@
 package com.covalense.javaapp.passingobjects;
 
+/* USE CASE :
+ * chips is a class 
+ *have two method open and eat
+ * 
+ */
+
+//SOLUTION :
 public class Chips {
 	
 	void open()
@@ -12,4 +19,4 @@ public class Chips {
 		System.out.println("eat chips");
 	}
 
-}
+}//end of class

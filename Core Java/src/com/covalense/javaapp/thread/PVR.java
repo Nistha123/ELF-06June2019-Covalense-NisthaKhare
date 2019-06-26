@@ -2,6 +2,13 @@ package com.covalense.javaapp.thread;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * PVR is a class 
+ * have a synchronized method book()
+ * 
+ */
+
+//SOLUTION :
 @Log
 public class PVR {
 
@@ -19,4 +26,4 @@ public class PVR {
 		}
 		
 	}
-}
+}//end of class

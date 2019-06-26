@@ -1,9 +1,20 @@
 package com.covalense.javaapp.abstractapp;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * Pen is an abstract class extending Honda class
+ * and have two abstract methods write and color
+ * 
+ */
+
+//SOLUTION :
+
+@Log
 public abstract class Pen {
 
 	void draw() {
-		System.out.println("I am a draw method");
+		log.info("I am a draw method");
 	}
 
 	abstract void write();

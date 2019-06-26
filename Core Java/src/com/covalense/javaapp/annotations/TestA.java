@@ -1,5 +1,11 @@
 package com.covalense.javaapp.annotations;
 
+/* USE CASE :
+ * TestA is a main class of mouse class
+ *
+ */
+
+//SOLUTION :
 @SuppressWarnings({"deprecation","unused"})
 public class TestA {
 	

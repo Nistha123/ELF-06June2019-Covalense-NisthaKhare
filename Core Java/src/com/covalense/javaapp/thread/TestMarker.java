@@ -1,6 +1,11 @@
 package com.covalense.javaapp.thread;
 
+/* USE CASE :
+ * TestMarker is a main class Of Pen
+ * having three threads
+ */
 
+//SOLUTION :
 public class TestMarker {
 
 	public static void main(String[] args) {
@@ -12,5 +17,5 @@ public class TestMarker {
 		t2.start();
 		Thread t3 = new Thread(m);		
 		t3.start();
-	}
-}
+	}//end of main
+}//end of class

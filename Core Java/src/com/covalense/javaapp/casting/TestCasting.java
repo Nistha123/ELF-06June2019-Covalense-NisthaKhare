@@ -1,5 +1,12 @@
 package com.covalense.javaapp.casting;
 
+/* USE CASE :
+ * TestCasting is a test class of Chips
+ * class 
+ * 
+ */
+
+//SOLUTION :
 public class TestCasting {
 
 	public static void main(String[] args) {

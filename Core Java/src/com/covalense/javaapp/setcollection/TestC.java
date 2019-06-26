@@ -5,6 +5,15 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * Testc is a main class Of non-generic LinkedHashSet
+ * storing data
+ */
+
+//SOLUTION :
+@Log
 public class TestC {
 	
 public static void main(String[] args) {
@@ -17,7 +26,7 @@ public static void main(String[] args) {
 		h.add("Nistha");
 		
 		for (Object o : h) {
-			System.out.println(o);
+			log.info(""+o);
 		}
 		
 		Iterator i = h.iterator();
@@ -25,8 +34,8 @@ public static void main(String[] args) {
 		while(i.hasNext()) {
 			
 			Object o = i.next();
-			System.out.println(o);
+			log.info(""+o);
 		}
-	}
+	}//end of main
 
-}
+}//end of class

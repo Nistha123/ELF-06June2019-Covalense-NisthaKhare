@@ -5,6 +5,12 @@ import java.util.concurrent.FutureTask;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * TestPencil is a main class Of Pencil thread class
+ * using FutureTask and having one thread
+ */
+
+//SOLUTION :
 @Log
 public class TestPencil {
 	public static void main(String[] args) {		

@@ -1,5 +1,11 @@
 package com.covalense.javaapp.thread;
 
+/* USE CASE :
+ * TestBrowser is a main class Of PVR
+ * having only one thread
+ */
+
+//SOLUTION :
 public class TestBrowser {
 
 	public static void main(String[] args) {
@@ -13,4 +19,4 @@ public class TestBrowser {
 		Browser b3= new Browser(p);
 		b3.start();
 	}
-}
+}//end of class

@@ -2,6 +2,13 @@ package com.covalense.javaapp.thread;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * Mouse is a class implementing Runnable 
+ * and have a run
+ * 
+ */
+
+//SOLUTION :
 @Log
 public class Mouse implements Runnable{
 	String name;
@@ -29,4 +36,4 @@ public class Mouse implements Runnable{
 	}
 	
 
-}
+}//end of class

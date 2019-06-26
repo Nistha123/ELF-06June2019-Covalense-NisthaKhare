@@ -4,6 +4,17 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import lombok.extern.java.Log;
+
+
+/* USE CASE :
+ * TestE is a main class Of generic TreeSet
+ * storing data
+ */
+
+//SOLUTION :
+
+@Log
 public class TestE {
 public static void main(String[] args) {
 		
@@ -15,16 +26,16 @@ public static void main(String[] args) {
 		h.add(9);
 		
 		for (Object o : h) {
-			System.out.println(o);
+			log.info(""+o);
 		}
 		
 		System.out.println(".............Using Iterator.........");
 		Iterator i = h.iterator();
 		while(i.hasNext()) {
 			Object o = i.next();
-			System.out.println(o);
+			log.info(""+o);
 		}
-	}
+	}//end of main
 
 
-}
+}//end of class

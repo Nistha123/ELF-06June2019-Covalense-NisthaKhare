@@ -1,5 +1,12 @@
 package com.covalense.javaapp.bean;
 
+/* USE CASE :
+ * TestArray is a class to store the
+ * data of Person class
+ * 
+ */
+
+//SOLUTION :
 public class Person {
 
 	String name;

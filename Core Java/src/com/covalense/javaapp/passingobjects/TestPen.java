@@ -1,5 +1,11 @@
 package com.covalense.javaapp.passingobjects;
 
+/* USE CASE :
+ * TestPen is a main class of Pen class
+ * 
+ */
+
+//SOLUTION :
 public class TestPen {
 
 	public static void main(String[] args) {
@@ -10,6 +16,6 @@ public class TestPen {
 		
 		w.recieve(p);
 				
-	}
+	}//end of main
 
-}
+}//end of main

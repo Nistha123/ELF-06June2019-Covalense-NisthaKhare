@@ -1,9 +1,19 @@
 package com.covalense.javaapp.ovveriding;
 
-public class GearOne  {
+import lombok.extern.java.Log;
 
-	void speed()
-	{
-		System.out.println("Speed at Gear one is between 0-100");
+/* USE CASE :
+ * GearOne is a class 
+ * and have a speed method
+ * 
+ */
+
+//SOLUTION :
+
+@Log
+public class GearOne {
+
+	void speed() {
+		log.info("Speed at Gear one is between 0-100");
 	}
-}
+}// end of class

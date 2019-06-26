@@ -1,5 +1,16 @@
 package com.covalense.javaapp.array;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestStringArray is a main class to store the
+ * array of type string
+ * 
+ */
+
+//SOLUTION :
+
+@Log
 public abstract class TestStringArray {
 
 	public static void main(String[] args) {
@@ -11,11 +22,11 @@ public abstract class TestStringArray {
 		s[2]="Abha";
 		s[3]="Aadvika";
 		
-		System.out.println(s.length);
+		log.info(""+s.length);
 		
 		for(int i=0 ; i<s.length ; i++)
 		{
-			System.out.println(s[i]);
+			log.info(""+s[i]);
 		}
 	}//End of main
 

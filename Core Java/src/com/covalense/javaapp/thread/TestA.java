@@ -2,6 +2,12 @@ package com.covalense.javaapp.thread;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * TestA is a main class Of Pen
+ * having two threads
+ */
+
+//SOLUTION :
 @Log
 public class TestA {
 

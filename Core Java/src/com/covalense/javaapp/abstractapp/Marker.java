@@ -1,16 +1,26 @@
 package com.covalense.javaapp.abstractapp;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * marker is a child class extending Pencil class
+ * and have two methods wrute and color
+ * 
+ */
+
+//SOLUTION :
+@Log
 public class Marker extends Pencil {
 
 	@Override
 	void write() {
-		System.out.println("Marker write method");
+		log.info("Marker write method");
 	}
 
 	@Override
 	void color() {
 
-		System.out.println("Marker color method");
+		log.info("Marker color method");
 	}
 
 }//End of class

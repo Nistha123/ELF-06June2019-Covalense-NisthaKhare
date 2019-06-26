@@ -1,5 +1,13 @@
 package com.covalense.javaapp.bean;
 
+
+/* USE CASE :
+ * Employee is a class to store the
+ * data of employees
+ * 
+ */
+
+//SOLUTION :
 public class Employee {
 
 	private String name;

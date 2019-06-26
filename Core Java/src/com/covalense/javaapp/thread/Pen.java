@@ -2,6 +2,13 @@ package com.covalense.javaapp.thread;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * Marker is a Thread class
+ * and have a run method
+ * 
+ */
+
+//SOLUTION :
 @Log
 public class Pen extends Thread {	
 	@Override

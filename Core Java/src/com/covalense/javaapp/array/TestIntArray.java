@@ -1,5 +1,16 @@
 package com.covalense.javaapp.array;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestIntArray is a main class to store the
+ * array of type Int
+ * 
+ */
+
+//SOLUTION :
+
+@Log
 public class TestIntArray {
 
 	public static void main(String[] args) {
@@ -11,7 +22,7 @@ public class TestIntArray {
 		i[2] = 3;
 
 		for (int j = i.length-1; j >= 0; j--) {
-			System.out.print(i[j] + " ");
+			log.info(i[j] + " ");
 		}
 	}//End of main
 

@@ -1,5 +1,12 @@
 package com.covalense.javaapp.passingobjects;
 
+/* USE CASE :
+ * TestChips is a main class of Baby class
+ * 
+ */
+
+//SOLUTION :
+
 public class TestChips {
 
 	public static void main(String[] args) {
@@ -12,5 +19,5 @@ public class TestChips {
 		b.recieve(l);
 				
 				
-	}
-}
+	}//end of main
+}//end of class

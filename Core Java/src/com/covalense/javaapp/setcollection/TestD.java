@@ -5,6 +5,15 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.ListIterator;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestD is a main class Of generic LinkedHashSet
+ * storing Integer data
+ */
+
+//SOLUTION :
+@Log
 public class TestD {
 	
 	
@@ -18,7 +27,7 @@ public static void main(String[] args) {
 		h.add(9);
 		
 		for (Object o : h) {
-			System.out.println(o);
+			log.info(""+o);
 		}
 		
 
@@ -27,10 +36,10 @@ public static void main(String[] args) {
 		while(i.hasNext()) {
 			
 			Object o = i.next();
-			System.out.println(o);
+			log.info(""+o);
 		}
 		
-	}
+	}//end of main
 
-}
+}//end of class
 

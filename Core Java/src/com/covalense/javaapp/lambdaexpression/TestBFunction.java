@@ -2,6 +2,9 @@ package com.covalense.javaapp.lambdaexpression;
 
 import java.util.function.Function;
 
+import lombok.extern.java.Log;
+
+@Log
 public class TestBFunction {
 	public static void main(String[] args) {
 		
@@ -10,7 +13,7 @@ public class TestBFunction {
 		
 		Integer i = f.apply("Nistha");
 		
-		System.out.println(i);
-	}
+		log.info(""+i);
+	}//end of main
 
-}
+}//end of class

@@ -2,6 +2,14 @@ package com.covalense.javaapp.setcollection;
 
 import java.util.HashSet;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestA is a main class Of HashSet
+ */
+
+//SOLUTION :
+@Log
 public class TestA {
 	
 	public static void main(String[] args) {
@@ -14,8 +22,8 @@ public class TestA {
 		h.add("Nistha");
 		
 		for (Object o : h) {
-			System.out.println(o);
+			log.info(""+o);
 		}
-	}
+	}//end of main
 
-}
+}//end of class

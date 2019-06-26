@@ -1,5 +1,10 @@
 package com.covalense.javaapp.abstractapp;
 
+/* USE CASE :
+ * TestMarker is main class of Pencil class
+ */
+
+//SOLUTION :
 public class TestMarker {
 
 	public static void main(String[] args) {

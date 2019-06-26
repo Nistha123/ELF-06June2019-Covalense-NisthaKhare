@@ -2,6 +2,14 @@ package com.covalense.javaapp.thread;
 
 import lombok.extern.java.Log;
 
+
+/* USE CASE :
+ * Marker is a class implementing Runnable 
+ * and have a run
+ * 
+ */
+
+//SOLUTION :
 @Log
 public class Marker implements Runnable{
 
@@ -19,4 +27,4 @@ public class Marker implements Runnable{
 			}
 		}
 	}
-}
+}//end of class

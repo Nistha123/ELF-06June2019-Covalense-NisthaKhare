@@ -1,16 +1,27 @@
 package com.covalense.javaapp.passingobjects;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * Lays is a child class extending Chips class
+ * and overriding methods open and eat
+ * 
+ */
+
+//SOLUTION :
+
+@Log
 public class Lays extends Chips {
 
 		void open()
 		{
-			System.out.println("open Lays");
+			log.info("open Lays");
 		}
 		
 		void eat()
 		{
-			System.out.println("eat Lays");
+			log.info("eat Lays");
 		}
 	
 
-}
+}//end of class

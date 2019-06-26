@@ -3,6 +3,12 @@ package com.covalense.javaapp.thread;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/* USE CASE :
+ * TestMouse is a main class Of Mouse thread class
+ * having five threads
+ */
+
+//SOLUTION :
 public class TestMouse {
 	
 	public static void main(String[] args) {
@@ -27,11 +33,7 @@ public class TestMouse {
 		service.execute(m5);
 		
 		service.shutdown();
-	}
-	
-	
-	
-	
-	
+	}//end of main
+		
 
-}
+}//end of class

@@ -1,6 +1,12 @@
 package com.covalense.javaapp.bean;
 
+/* USE CASE :
+ * TestArray is a main class to store the
+ * data in database and call the Person class object
+ * 
+ */
 
+//SOLUTION :
 public class TestBean {
 
 	public static void main(String[] args) {

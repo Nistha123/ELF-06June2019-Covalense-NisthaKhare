@@ -1,10 +1,20 @@
 package com.covalense.javaapp.bean;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * DB2 is a database class to store the
+ * pass the object of Person class in store method
+ * 
+ */
+
+//SOLUTION :
+@Log
 public class DB2 {
 
 	void store(Person p) {
-		System.out.println("*********** DB2 Data ********");
-		System.out.println("Name is " + p.name);
-		System.out.println("Age is " + p.age);
+		log.info("*********** DB2 Data ********");
+		log.info("Name is " + p.name);
+		log.info("Age is " + p.age);
 	}
 }//End of class

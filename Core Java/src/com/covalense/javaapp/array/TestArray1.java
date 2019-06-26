@@ -1,5 +1,16 @@
 package com.covalense.javaapp.array;
 
+import lombok.extern.java.Log;
+
+/* USE CASE :
+ * TestArray1 is a main class to store the
+ * array of type char
+ * 
+ */
+
+//SOLUTION :
+
+@Log
 public class TestArray1 {
 
 	public static void main(String[] args) {
@@ -11,10 +22,10 @@ public class TestArray1 {
 		c[3]='d';
 		c[4]='e';
 		
-		System.out.println(c.length);
+		log.info(""+c.length);
 		for(int i=0 ; i<c.length ; i++)
 		{
-			System.out.println(c[i]);
+			log.info(""+c[i]);
 		}
 	}//End of main
 

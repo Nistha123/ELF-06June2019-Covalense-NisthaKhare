@@ -2,6 +2,13 @@ package com.covalense.javaapp.collection;
 
 import java.util.Comparator;
 
+/* USE CASE :
+ * EmployeeById is a class implementing Comparator 
+ * to compare the employee ID
+ * 
+ */
+
+//SOLUTION :
 public class EmployeeById implements Comparator<Employee> {
 
 	@Override
@@ -17,4 +24,4 @@ public class EmployeeById implements Comparator<Employee> {
 
 	}
 
-}
+}//end of class

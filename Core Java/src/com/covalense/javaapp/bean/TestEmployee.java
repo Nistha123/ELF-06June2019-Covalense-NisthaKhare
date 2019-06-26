@@ -1,6 +1,12 @@
 package com.covalense.javaapp.bean;
 
+/* USE CASE :
+ * TestEmployee is a main class to store the
+ * data in database and call the Employee class object
+ * 
+ */
 
+//SOLUTION :
 public class TestEmployee {
 
 	public static void main(String[] args) {
