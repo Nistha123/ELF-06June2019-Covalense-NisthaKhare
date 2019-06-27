@@ -2,6 +2,8 @@ package com.covalense.javaapp.collection;
 
 import java.util.TreeSet;
 
+import com.covalense.javaapp.collection.Product;;
+
 public class TreeSetProduct {
 	
 	public static void main(String[] args) {

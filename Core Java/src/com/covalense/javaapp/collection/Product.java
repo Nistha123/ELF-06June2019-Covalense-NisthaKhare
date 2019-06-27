@@ -1,5 +1,11 @@
 package com.covalense.javaapp.collection;
 
+/* USE CASE :
+ * Product is a class having Product data 
+ * 
+ */
+
+//SOLUTION :
 public class Product implements Comparable<Product>{
 	
 	String name;
