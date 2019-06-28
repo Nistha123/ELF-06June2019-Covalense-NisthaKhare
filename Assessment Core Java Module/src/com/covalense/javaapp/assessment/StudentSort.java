@@ -1,6 +1,7 @@
 package com.covalense.javaapp.assessment;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Scanner;
@@ -37,24 +38,24 @@ public class StudentSort {
 		int n = sc.nextInt();
 
 		Iterator<Student> i = null ;
+		TreeSet<Student> ts =null;
 		
 	
 		switch (n) {
 		case 1:
 
-			SortByRollNo sbr = new SortByRollNo();		
-			i = al.iterator();
+			SortByRollNo sbr = new SortByRollNo();
+			ts = new TreeSet<Student>(sbr);
 
 			break;
 		case 2:
 
 			SortByName sbn = new SortByName();
-			i = al.iterator();
-
+			ts = new TreeSet<Student>(sbn);
 			break;
 		case 3:
 			SortByPercent sbp = new SortByPercent();
-			i = al.iterator();
+			ts = new TreeSet<Student>(sbp);
 			break;
 
 		default:
@@ -62,15 +63,16 @@ public class StudentSort {
 			break;
 		}
 
-		while (i.hasNext()) {
-			Student sn = i.next();
+	for (Student sn : ts) {
+		log.info("Student Id :" + sn.getId());
+		log.info("Student name :" + sn.getName());
+		log.info("Student percent :" + sn.getPercent());
+	}
 			
-			log.info("Student Id :" + sn.getId());
-			log.info("Student name :" + sn.getName());
-			log.info("Student percent :" + sn.getPercent());
+			
 
 			
-		}
+		
 
 
 	}// end of main
