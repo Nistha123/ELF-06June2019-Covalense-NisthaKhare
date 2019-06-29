@@ -1,0 +1,44 @@
+nav{
+    width: 100%;
+    background: gray;
+}
+ul{
+    margin: 0%;
+}
+
+li{
+    display: inline;
+}
+
+ul li a{
+
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    padding: 30px;
+    display: inline-block;
+}
+
+#txt{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 40px;
+    border-color: grey;
+    box-shadow: 3 3 40px 80px,black;
+}
+
+#but:focus{
+    width: 100px;
+    height: 20px;
+    padding: 15px;
+    margin: 50px;
+    border-radius: 10px;
+    background: cadetblue;
+}
+
+p::selection{
+    background: lightgreen;
+    color: grey;
+    font-size: 30px;
+}
