@@ -18,12 +18,11 @@ import lombok.extern.java.Log;
 public class TestStudentOne {
 
 	public static void main(String[] args) {
-
-		Student s1 = new Student("Nistha", 4, 77.0);
-		Student s2 = new Student("Rahul", 3, 87.0);
-		Student s3 = new Student("Nikita", 2, 79.7);
-		Student s4 = new Student("sakshi", 1, 67.9);
-		Student s5 = new Student("shruti", 5, 57.6);
+		Student s1 = new Student("Nistha", 4, 77.0,"Female");
+		Student s2 = new Student("Rahul", 3, 87.0,"male");
+		Student s3 = new Student("Nikita", 2, 29.7,"Female");
+		Student s4 = new Student("sakshi", 1, 30.9,"Female");
+		Student s5 = new Student("shruti", 5, 57.6,"Female");
 
 		Comparator<Student> c = (e, f) -> {
 

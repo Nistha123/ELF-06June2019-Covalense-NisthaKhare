@@ -3,7 +3,7 @@ package com.covalense.javaapp.streamexample;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import com.covalense.javaapp.daysevenassignment.Student;
+import com.covalense.javaapp.streamexample.Student;
 
 import lombok.extern.java.Log;
 

@@ -1,7 +1,7 @@
 package com.covalense.javaapp.daysevenassignment;
 
 /* USE CASE :
- * Student is a class having Student data 
+ * Student is a Bean class having Student data 
  * 
  */
 
@@ -11,12 +11,22 @@ public class Student {
 	private String name;
 	private int id;
 	private double percent;
+	private String gender;
 	
-	public Student(String name, int id, double percent) {
+	public Student(String name, int id, double percent, String gender) {
 		super();
 		this.name = name;
 		this.id = id;
 		this.percent = percent;
+		this.gender = gender;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getName() {

@@ -1,5 +1,11 @@
 package com.covalense.javaapp.daysevenassignment;
 
+/* USE CASE :
+ * Product is a bean class having Student data 
+ * 
+ */
+
+//SOLUTION :
 public class Product {
 	
 	private String name;
@@ -26,4 +32,4 @@ public class Product {
 	}
 	
 	
-}
+}//end of class

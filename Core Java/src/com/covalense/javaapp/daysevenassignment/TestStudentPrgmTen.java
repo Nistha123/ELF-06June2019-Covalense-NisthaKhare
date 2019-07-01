@@ -1,25 +1,22 @@
 package com.covalense.javaapp.daysevenassignment;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import lombok.extern.java.Log;
 
 /* USE CASE :
- * TestStudentPrgmThree is a main class storing Student data 
- * to filter the Student percentage using Stream 
+ * TestStudentPrgmTen is a main class storing Student data 
+ * and display using For each and stream
  * 
  */
 
 //SOLUTION :
+
 @Log
-public class TestStudentPrgmThree {
-	
+public class TestStudentPrgmTen {
+
 	public static void main(String[] args) {
 
 		Student s1 = new Student("Nistha", 4, 77.0,"Female");
@@ -27,6 +24,7 @@ public class TestStudentPrgmThree {
 		Student s3 = new Student("Nikita", 2, 29.7,"Female");
 		Student s4 = new Student("sakshi", 1, 30.9,"Female");
 		Student s5 = new Student("shruti", 5, 57.6,"Female");
+		
 		ArrayList<Student> al = new ArrayList<Student>();
 		
 		al.add(s1);
@@ -35,17 +33,12 @@ public class TestStudentPrgmThree {
 		al.add(s4);
 		al.add(s5);
 		
-		List<Student> per =  al.stream().filter(i->i.getPercent()<=35.0).collect(Collectors.toList());
-		/*
-		 * for (Student s : per) {
-		 * 
-		 * log.info("Name is :" + s.getName() + " with " + "percentage is :" +
-		 * s.getPercent());
-		 * 
-		 * }
-		 */
 		
-		per.stream().forEach(a->log.info("percentage is :" + a.getPercent()));
+		al.stream().forEach(i->log.info("Students Id are :" + i.getId()));
+		log.info("************************************************************");
+		al.stream().forEach(i->log.info("Students Name are :" + i.getName()));
+		log.info("************************************************************");
+		al.stream().forEach(i->log.info("Students Percent are :" + i.getPercent()));
 		
 		
 	}//end of main

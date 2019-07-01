@@ -11,14 +11,14 @@ import java.util.stream.Collectors;
 import lombok.extern.java.Log;
 
 /* USE CASE :
- * TestStudentPrgmThree is a main class storing Student data 
+ * TestStudentPrgmFour is a main class storing Student data 
  * to filter the Student percentage using Stream 
  * 
  */
 
 //SOLUTION :
 @Log
-public class TestStudentPrgmThree {
+public class TestStudentPrgmFour {
 	
 	public static void main(String[] args) {
 
@@ -27,6 +27,8 @@ public class TestStudentPrgmThree {
 		Student s3 = new Student("Nikita", 2, 29.7,"Female");
 		Student s4 = new Student("sakshi", 1, 30.9,"Female");
 		Student s5 = new Student("shruti", 5, 57.6,"Female");
+		
+		
 		ArrayList<Student> al = new ArrayList<Student>();
 		
 		al.add(s1);
@@ -35,7 +37,7 @@ public class TestStudentPrgmThree {
 		al.add(s4);
 		al.add(s5);
 		
-		List<Student> per =  al.stream().filter(i->i.getPercent()<=35.0).collect(Collectors.toList());
+		List<Student> per =  al.stream().filter(i->i.getPercent()>=75.0).collect(Collectors.toList());
 		/*
 		 * for (Student s : per) {
 		 * 
