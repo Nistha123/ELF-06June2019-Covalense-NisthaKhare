@@ -1,18 +1,23 @@
 package com.covalense.jdbcapp;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
 
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJDbcPrgm {
+public final class PreparedStatementExampleTwo {
 
 	public static void main(String[] args) {
 
 		Connection con = null;
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
 		try {
@@ -29,9 +34,12 @@ public final class MyFirstJDbcPrgm {
 			log.info("Connection Impl classes====> " + con.getClass());
 
 			// 3. Issues "SQL Queries" via "Connection"
-			String query = "Select * from employee_info";
-			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);
+			String query = "select * from employee_info where id=? and Manager_Id=?";
+			log.info("Queries " + query);
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, Integer.parseInt(args[0]));
+			pstmt.setInt(2, Integer.parseInt(args[1]));
+			rs = pstmt.executeQuery();
 			
 
 			// 4. "Process the Results" returned by "SQL Queries"
@@ -60,8 +68,8 @@ public final class MyFirstJDbcPrgm {
 			try {
 				if (con != null) {
 					con.close();
-					if (stmt != null) {
-						stmt.close();
+					if (pstmt != null) {
+						pstmt.close();
 					}
 					if (rs != null) {
 						rs.close();

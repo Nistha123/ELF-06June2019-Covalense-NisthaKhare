@@ -1,13 +1,17 @@
 package com.covalense.jdbcapp;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
 
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJDbcPrgm {
+public final class StatementExampleOne {
 
 	public static void main(String[] args) {
 
@@ -29,7 +33,9 @@ public final class MyFirstJDbcPrgm {
 			log.info("Connection Impl classes====> " + con.getClass());
 
 			// 3. Issues "SQL Queries" via "Connection"
-			String query = "Select * from employee_info";
+			String query = "Select * from employee_info" 
+							+ " where Id=1 ";
+			log.info("Queries " + query);
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			

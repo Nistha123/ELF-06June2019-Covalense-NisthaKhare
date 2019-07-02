@@ -1,13 +1,17 @@
 package com.covalense.jdbcapp;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
 
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJDbcPrgm {
+public final class StatementExampleTwo {
 
 	public static void main(String[] args) {
 
@@ -29,29 +33,15 @@ public final class MyFirstJDbcPrgm {
 			log.info("Connection Impl classes====> " + con.getClass());
 
 			// 3. Issues "SQL Queries" via "Connection"
-			String query = "Select * from employee_info";
+			String query = "Insert into employee_info" + 
+			"values(8,'Abhay',30,'male',10000,34889789,"
+					+ "'abhay@gmail.com','Jr. Software Developer','1990-08-10',776867869,null,103,2);";
+			log.info("Queries " + query);
 			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);
+			int res = stmt.executeUpdate(query);
+			log.info("Query inserted" + res);
 			
-
-			// 4. "Process the Results" returned by "SQL Queries"
-			while (rs.next()) {
-				log.info("Id (PK)        ====> " + rs.getInt("ID"));
-				log.info("Name     		 ====> " + rs.getString("NAME"));
-				log.info("age     		 ====> " + rs.getInt("AGE"));
-				log.info("Gender  		 ====> " + rs.getString("GENDER"));
-				log.info("salary  		 ====> " + rs.getDouble("SALARY"));
-				log.info("phone   		 ====> " + rs.getInt("PHONE"));
-				log.info("email   		 ====> " + rs.getDate("JOINING_DATE"));
-				log.info("designation    ====> " + rs.getInt("ACCNT_NO"));
-				log.info("dob            ====> " + rs.getString("EMAIL"));
-				log.info("Acnt_no        ====> " + rs.getString("DESIGNATION"));
-				log.info("joining_date   ====> " + rs.getDate("DOB"));
-				log.info("Dept_ID        ====> " + rs.getInt("DEPT_ID"));
-				log.info("Manager_ID     ====> " + rs.getInt("MANAGER_ID"));
-
-			} // end of while
-
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
