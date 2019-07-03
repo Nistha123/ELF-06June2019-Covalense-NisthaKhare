@@ -12,7 +12,7 @@ import com.mysql.jdbc.Driver;
 import lombok.extern.java.Log;
 
 @Log
-public final class PreparedStatementExampleThree {
+public final class PreparedStatementExampleFour {
 
 	public static void main(String[] args) {
 
@@ -28,8 +28,8 @@ public final class PreparedStatementExampleThree {
 			//String dbUrl = "jdbc:mysql://localhost:3306/covalense_db?user=root&password=root";
 			//con = DriverManager.getConnection(dbUrl);
 			
-			String dbUrl = "jdbc:mysql://localhost:3306/awsDB";
-			con = DriverManager.getConnection(dbUrl, "root", "root");
+			String dbUrl = "jdbc:mysql://mycoval-aws.cpd5dqeaqbqz.ap-south-1.rds.amazonaws.com:3306/awsDB";
+			con = DriverManager.getConnection(dbUrl, "root", "Nistha11");
 			
 			log.info("Connection Impl classes====> " + con.getClass());
 

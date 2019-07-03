@@ -1,45 +1,30 @@
-package com.covalense.jdbcapp;
+package com.covalense.jadbcapp.connectionpool;
 
 import java.sql.*;
-
-import com.mysql.jdbc.Driver;
 
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJDbcPrgm {
+public final class ConnectionPoolTest {
 
 	public static void main(String[] args) {
 
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+		ConnectionPool pool = null;
 
 		try {
-			// 1. Load the "Driver"
-			Driver driver = new Driver();
-			DriverManager.registerDriver(driver);
-			// 2. Get the "DB Connection" via "Driver"
-			//String dbUrl = "jdbc:mysql://localhost:3306/covalense_db?user=root&password=root";
-			//con = DriverManager.getConnection(dbUrl);
+			pool = ConnectionPool.getConnectionPool();
+			con = pool.getConnectionFromPool();
 			
-			String dbUrl = "jdbc:mysql://localhost:3306/covalense_db";
-			con = DriverManager.getConnection(dbUrl, "root", "root");
-			
-			log.info("Connection Impl classes====> " + con.getClass());
-
 			// 3. Issues "SQL Queries" via "Connection"
 			String query = "Select * from employee_info";
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			
-
 			// 4. "Process the Results" returned by "SQL Queries"
 			while (rs.next()) {
-				/*
-				 * log.info("Id (PK)        ====> " + rs.getInt("ID"));
-				 * log.info("Name     		 ====> " + rs.getString("NAME"));
-				 */
 				
 				log.info("Id (PK)        ====> " + rs.getInt(1));
 				log.info("Name     		 ====> " + rs.getString(2));
@@ -53,26 +38,23 @@ public final class MyFirstJDbcPrgm {
 				log.info("Acnt_no        ====> " + rs.getString("DESIGNATION"));
 				log.info("joining_date   ====> " + rs.getDate("DOB"));
 				log.info("Dept_ID        ====> " + rs.getInt("DEPT_ID"));
-				log.info("Manager_ID     ====> " + rs.getInt("MANAGER_ID"));
-				
-
+				log.info("Manager_ID     ====> " + rs.getInt("MANAGER_ID"));				
 			} // end of while
-
-		} catch (SQLException e) {
+			} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			// 5. Close all "JDBC objects"
 
 			try {
-				if (con != null) {
-					con.close();
+				pool.returnConnectionToPool(con);
+
 					if (stmt != null) {
 						stmt.close();
 					}
 					if (rs != null) {
 						rs.close();
 					}
-				}
+				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

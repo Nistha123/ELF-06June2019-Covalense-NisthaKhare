@@ -1,0 +1,6 @@
+#Connection Pool
+#Wed Jul 03 17:04:26 IST 2019
+driverClassName=com.mysql.jdbc.Driver
+userPassword=root
+userName=root
+dbUrl=jdbc\:mysql\://localhost\:3306/covalense_db
