@@ -2,6 +2,12 @@ package com.covalense.javaapp.testassesment;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * AnimalPrgmFive is a class to calculate the number of objects created of this class
+ * 
+ */
+
+//SOLUTION :
 @Log
 public class AnimalPrgmFive {
 	static int count;

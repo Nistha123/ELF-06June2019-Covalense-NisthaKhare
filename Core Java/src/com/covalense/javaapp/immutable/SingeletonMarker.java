@@ -1,12 +1,15 @@
 package com.covalense.javaapp.immutable;
 
+import lombok.extern.java.Log;
+
+@Log
 public class SingeletonMarker {
 	
 	private final static SingeletonMarker s = new SingeletonMarker();
 	
 	private SingeletonMarker()
 	{
-		System.out.println("Marker is here");
+		log.info("Marker is here");
 		
 	}
 

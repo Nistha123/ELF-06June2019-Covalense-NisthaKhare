@@ -10,6 +10,11 @@ import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 import lombok.extern.java.Log;
 
+/* USE CASE :
+ * StudentStreamPrgmSix is a Bean main class 
+ *have arraylist filtered for male and female Topper using stream and Comparator
+ * 
+ */
 @Log
 public class StudentStreamPrgmSix {
 
