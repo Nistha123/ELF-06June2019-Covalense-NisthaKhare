@@ -17,3 +17,25 @@
 5. WAQ to display the minimum salary for each of the job excluding all the employees whose name end with 'S'.
 
 ==> select First_Name , min(salary) salary , job from employee where First_Name NOT like '%s' GROUP BY JOB ;
+
+6. WAQ to display the list of the employees who is working in "Admin" department
+
+==> Select * from employee where Dept_no=(Select Dept_no from department where Dept_name="Admin")
+
+7. WAQ to display the list of the department names who are working as software developer.
+
+==> Select * from department where Dept_no=(Select Dept_no from employee where Job="Software developer")
+
+8. WAQ to display the second maximum salary.
+
+==> Select First_Name,Last_name,Job,max(salary) from employee where Salary<(Select max(Salary) from employee)
+
+9. WAQ to display the third maximum salary.
+
+==> Select First_Name,Last_name,Job,max(salary) from employee where Salary<(Select max(Salary) from employee where 
+Salary < (Select max(Salary) from employee))
+
+10. WAQ to display the fourth maximum salary.
+
+==> Select First_Name,Last_name,Job,max(salary) from employee where Salary<(Select max(Salary) from employee where 
+Salary < (Select max(Salary) from employee where Salary < (Select max(Salary) from employee)))
