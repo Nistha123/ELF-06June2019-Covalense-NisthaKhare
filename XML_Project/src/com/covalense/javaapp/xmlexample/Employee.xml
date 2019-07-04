@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee_info>
+	<emp_id>123</emp_id>
+	<emp_name>Nistha</emp_name>
+	<emp_age>25</emp_age>
+	<emp_designation>Software Engineer</emp_designation>
+	<emp_email>nish@gmail.com</emp_email>
+	<emp_address>
+		<addr_type>present</addr_type>
+		<address1>#103,cirrus minor</address1>
+		<address2>GM Palya,CV Raman Nagar</address2>
+		<landmark>Near Hanuman Temple</landmark>
+		<city>Bangalore</city>
+		<state>Karnataka</state>
+		<pincode>560075</pincode>
+	</emp_address>
+	<emp_address>
+		<addr_type>permanent</addr_type>
+		<address1>S2,Shri maa apartment</address1>
+		<address2>CNG Road</address2>
+		<landmark>Near petrol pump</landmark>
+		<city>Kanpur</city>
+		<state>up</state>
+		<pincode>208017</pincode>
+	</emp_address>
+	
+	<Welcome_Emp_msg>
+		<![CDATA[
+			<html><body><b><U><I>
+			Welcome to the Covalense!!!!
+			</I></U></b></body></html>
+		]]>
+	</Welcome_Emp_msg>
+	<Welcome_Emp_msg>
+	
+			&lt;html&gt;&lt;body&gt;&lt;b&gt;&lt;U&gt;&lt;I&gt;
+			Welcome to the Covalense!!!!
+			&lt;/I&gt;&lt;/U&gt;&lt;/b&gt;&lt;/body&gt;&lt;/html&gt;
+		
+	</Welcome_Emp_msg>
+	<Welcome_Emp_msg>
+
+			<html><body><b><U><I>
+			Welcome to the Covalense!!!!
+			</I></U></b></body></html>
+		
+	</Welcome_Emp_msg>
+
+</employee_info>
