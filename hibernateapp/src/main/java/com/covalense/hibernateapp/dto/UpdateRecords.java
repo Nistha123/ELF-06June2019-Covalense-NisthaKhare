@@ -24,13 +24,14 @@ public class UpdateRecords {
 		updateInfo.setSalary(65000);
 		updateInfo.setDesignation("Jr. Software Developer");
 		
-		EmployeeOtherInfoBean updateOtherInfo = session.get(EmployeeOtherInfoBean.class, 3);
+		EmployeeOtherInfoBean updateOtherInfo = session.get(EmployeeOtherInfoBean.class, 1);
 		
 		updateOtherInfo.setBlood_grp("A-");
 		
 		Transaction transaction = session.beginTransaction();
-		session.update(updateInfo);
+		//session.update(updateInfo);
 		session.update(updateOtherInfo);
+		session.saveOrUpdate(updateInfo);
 		transaction.commit();
 		session.close();
 		

@@ -1,12 +1,13 @@
 package com.covalense.designpattern.dao;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import com.covalense.designpattern.beans.EmployeeInfoBean;
 import com.covalense.designpattern.util.HibernateUtil;
@@ -16,9 +17,25 @@ import lombok.extern.java.Log;
 @Log
 public class EmployeeHibernateDAOImplTwo implements EmployeeDAO{
 
-	public ArrayList<EmployeeInfoBean> getAllEmployeeInfo() {
-		return null;
-		//to do
+	public List<EmployeeInfoBean> getAllEmployeeInfo() {
+		Session session = HibernateUtil.openSession();	
+		String query = "from EmployeeInfoBean";
+		Query<EmployeeInfoBean> queryBean = session.createQuery(query);	
+		List<EmployeeInfoBean> beanList = queryBean.list();
+		
+		for (EmployeeInfoBean bean : beanList) {
+			log.info("Id is " + bean.getId());
+			  log.info("name is " + bean.getName());
+			  log.info("phone is " + bean.getPhone());
+			  log.info("Age is " + bean.getAge()); 
+			  log.info("Salary is "+ bean.getSalary());
+			  log.info("Account no is " + bean.getAccountNo());
+			  log.info("DOB is " + bean.getDob());
+			  log.info("Designation is " + bean.getDesignation()); 
+			  log.info("Dept ID is " + bean.getDepartmentId());
+			  log.info("Manager ID is " + bean.getManagerId());
+		}
+		return beanList;
 	}
 
 	public EmployeeInfoBean getEmployeeInfo(int id) {
