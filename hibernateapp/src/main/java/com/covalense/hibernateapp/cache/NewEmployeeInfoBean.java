@@ -1,4 +1,4 @@
-package com.covalense.designpattern.cache;
+package com.covalense.hibernateapp.cache;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.covalense.designpattern.criteria;
+package com.covalense.hibernateapp.criteria;
 
 import java.util.List;
 
