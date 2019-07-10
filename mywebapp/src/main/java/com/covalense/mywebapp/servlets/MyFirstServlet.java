@@ -15,6 +15,10 @@ public class MyFirstServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 	throws ServletException, IOException {
 		
+		//Get query string Information
+		String fnameValue = req.getParameter("fname");
+		String lnameValue = req.getParameter("lname");
+		
 		String currentDataTime = new Date().toString();
 		String htmlResponse = "<!DOCTYPE html>"+
 							  "<html>"+
@@ -27,14 +31,17 @@ public class MyFirstServlet extends HttpServlet{
 							  "	Current Date and Time is : "+
 							  "	<br>"+
 							  "	<span style=\"color: blue\">" +currentDataTime+ "</span>"+
+							  "<BR><BR>" +
+							  "First Name :" + fnameValue + " " + "<BR>" +
+							   "Last Name :" + lnameValue +
 							  "	</h1>"+
 							  "</body>"+
 							  "</html>";
 		
 		//send above HTML Response to Browser
 		
-		resp.setContentType("text/html");
-		resp.setHeader("Refresh", "1");  //Auto Refresh for every second
+		resp.setContentType("html/text");
+	//	resp.setHeader("Refresh", "1");  //Auto Refresh for every second
 		PrintWriter out = resp.getWriter();
 		out.print(htmlResponse);
 		
