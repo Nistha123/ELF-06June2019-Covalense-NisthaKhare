@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.covalense.mywebapp.beans.EmployeeDepartmentInfoBean;
 import com.covalense.mywebapp.beans.EmployeeInfoBean;
 
 
@@ -19,6 +20,7 @@ public class HibernateUtil {
 	    return  new Configuration()
 	    		.configure()
 	    		.addAnnotatedClass(EmployeeInfoBean.class)
+	    		.addAnnotatedClass(EmployeeDepartmentInfoBean.class)
 	    		.buildSessionFactory() ;
 
 	}

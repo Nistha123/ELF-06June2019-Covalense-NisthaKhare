@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.covalense.mywebapp.beans.EmployeeDepartmentInfoBean;
 import com.covalense.mywebapp.beans.EmployeeInfoBean;
 import com.mysql.jdbc.Driver;
 
@@ -141,6 +142,12 @@ public final class EmployeeJDBCDAOImpl implements EmployeeDAO
 
 	@Override
 	public boolean deleteEmployeeInfo(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean createDeptInfo(EmployeeDepartmentInfoBean bean) {
 		// TODO Auto-generated method stub
 		return false;
 	}

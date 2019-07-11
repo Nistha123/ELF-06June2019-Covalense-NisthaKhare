@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import com.covalense.mywebapp.beans.EmployeeDepartmentInfoBean;
 import com.covalense.mywebapp.beans.EmployeeInfoBean;
 import com.covalense.mywebapp.util.HibernateUtil;
 
@@ -96,6 +97,27 @@ public class EmployeeHibernateDAOImpl implements EmployeeDAO{
 	@Override
 	public boolean deleteEmployeeInfo(String id) {
 		return false;
+	}
+	
+	private boolean saveOrUpdateDept(EmployeeDepartmentInfoBean beanDept) {
+		Transaction txn = null;
+		try(Session session = HibernateUtil.openSession();) {			
+			txn = session.beginTransaction();
+			session.saveOrUpdate(beanDept);
+			txn.commit();
+			return true;
+		}catch(Exception e) {
+			log.severe(Arrays.toString(e.getStackTrace()));
+			if(txn!=null) {
+				txn.rollback();
+			}
+			return false;
+		}			
+	}
+
+	@Override
+	public boolean createDeptInfo(EmployeeDepartmentInfoBean bean) {
+		return saveOrUpdateDept(bean);
 	}
 
 }
