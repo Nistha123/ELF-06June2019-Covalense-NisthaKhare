@@ -1,0 +1,27 @@
+.demo{
+    color: blue;
+    font-size: 20px;
+}
+#name{
+    color: black;
+    font-size: 30px;
+}
+
+#age{
+    color: black;
+    font-size:30px;
+}
+#mybutton{
+    color: rgb(218, 65, 110);
+    font-size: 100%;
+}
+
+#mybutton1{
+    color: teal;
+    font-size: 100%;
+
+}
+
+.blue{
+    font-family: 'Courier New', Courier, monospace;
+}
