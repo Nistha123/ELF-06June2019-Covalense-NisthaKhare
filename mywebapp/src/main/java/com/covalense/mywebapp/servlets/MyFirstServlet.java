@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,17 +21,23 @@ public class MyFirstServlet extends HttpServlet{
 	 }
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+	protected synchronized void doGet(HttpServletRequest req, HttpServletResponse resp) 
 	throws ServletException, IOException {
 		
-		String httpMethod = req.getMethod();
-		String protocol = req.getProtocol();
-		String reqURL = req.getRequestURL().toString();
+		ServletContext ctx = getServletContext();
+		String movieName = ctx.getInitParameter("movie");
 		
-		log.info("HTTP Method===>" + httpMethod);
-		log.info("Protocol===>" + protocol);
-		log.info("Requested URL===>" + reqURL);
+		ServletConfig config = getServletConfig();
+		String actorName = config.getInitParameter("actor");
 		
+		/*
+		 * String httpMethod = req.getMethod(); String protocol = req.getProtocol();
+		 * String reqURL = req.getRequestURL().toString();
+		 * 
+		 * log.info("HTTP Method===>" + httpMethod); log.info("Protocol===>" +
+		 * protocol); log.info("Requested URL===>" + reqURL);
+		 * 
+		 */
 		//Get query string Information
 		String fnameValue = req.getParameter("fname");
 		String lnameValue = req.getParameter("lname");
@@ -49,6 +57,9 @@ public class MyFirstServlet extends HttpServlet{
 							  "<BR><BR>" +
 							  "First Name :" + fnameValue + " " + "<BR>" +
 							   "Last Name :" + lnameValue +
+							   "<BR><BR>" +
+							  "Movie Name :" + movieName + " " + "<BR>" +
+							   "Actor Name :" + actorName +
 							  "	</h1>"+
 							  "</body>"+
 							  "</html>";
