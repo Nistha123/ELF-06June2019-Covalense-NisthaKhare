@@ -12,10 +12,7 @@ import lombok.extern.java.Log;
 @Log
 public class UpdateRecord {
 	public static void main(String[] args) {
-
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
-		
+		Session session = HibernateUtil.openSession();
 		/*
 		 * String hql = "update from EmployeeInfoBean set name='Rohit' where id=:eid";
 		 */

@@ -14,8 +14,7 @@ import lombok.extern.java.Log;
 @Log
 public class GetAllDetails {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		
 		Criteria criteria = session.createCriteria(EmployeeInfoBean.class);
 		List<EmployeeInfoBean> empList = criteria.list();

@@ -25,8 +25,7 @@ public class SaveDemo {
 		Date dateDOB = dateFormat.parse("1990-05-01");
 		Date dateJoin = dateFormat.parse("2019-05-01");
 		
-		SessionFactory factory = HibernateUtil.buildSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		EmployeeInfoBean empinfo = new EmployeeInfoBean();
 		empinfo.setId(1);
 		empinfo.setName("Nistha");

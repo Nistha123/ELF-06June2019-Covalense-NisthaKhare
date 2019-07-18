@@ -18,8 +18,7 @@ import lombok.extern.java.Log;
 @Log
 public class GetDetailProj {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		Criteria criteria = session.createCriteria(EmployeeInfoBean.class);
 		Projection proName = Projections.property("name");
 		Projection proId = Projections.property("id");

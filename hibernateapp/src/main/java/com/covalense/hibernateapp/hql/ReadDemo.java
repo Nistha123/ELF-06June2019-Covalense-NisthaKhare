@@ -16,8 +16,7 @@ import lombok.extern.java.Log;
 @Log
 public class ReadDemo {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		String hql = "Select name from EmployeeInfoBean";
 		Query query = session.createQuery(hql);
 		 List<String> namelst = query.list();

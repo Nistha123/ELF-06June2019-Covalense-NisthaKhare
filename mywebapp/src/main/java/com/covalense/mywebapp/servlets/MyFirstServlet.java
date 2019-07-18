@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.covalense.mywebapp.beans.EmployeeInfoBean;
+
 import lombok.extern.java.Log;
 
 @Log
@@ -70,6 +72,28 @@ public class MyFirstServlet extends HttpServlet{
 	//	resp.setHeader("Refresh", "1");  //Auto Refresh for every second
 		PrintWriter out = resp.getWriter();
 		out.print(htmlResponse);
+		
+		//Get the object from Forward Servlet
+		
+				EmployeeInfoBean empInfo = (EmployeeInfoBean) ctx.getAttribute("info");
+				if(empInfo==null) {
+					out.print("<HTML>");
+					out.print("<BODY>");
+					out.print("<span style=\"color: blue\"> Employee Object not found !!!</span>");
+					out.print("</BODY>");
+					out.print("</HTML>");
+				}else {
+					out.print("<HTML>");
+					out.print("<BODY>");
+					out.print("<span style=\"color: blue\"> Employee Object found ...</span>");
+					out.print("<BR>");
+					out.print("<BR>Id is " + empInfo.getId());
+					out.print("<BR>name is " + empInfo.getName());
+					out.print("<BR>phone is " + empInfo.getPhone());
+					out.print("<BR>Email is " + empInfo.getEmail());
+					out.print("</BODY>");
+					out.print("</HTML>");
+				}
 		
 	}//End to doGet
 

@@ -6,6 +6,7 @@ import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import lombok.extern.java.Log;
@@ -31,7 +32,7 @@ public class HibernateProgramForAWS {
 		
 		//1. Load the Config File
 		Configuration configuration = new Configuration();
-		configuration.configure("hibernate.aws.cfg.xml");
+		configuration.configure("com/covalense/hibernateapp/awsrds/hibernate.aws.cfg.xml");
 		configuration.addAnnotatedClass(EmployeeInfoBean.class);
 		
 		//2. Build the sessionfactory
@@ -41,8 +42,10 @@ public class HibernateProgramForAWS {
 				Session session = factory.openSession();
 				
 				//4. Interact with DB via session
-				EmployeeInfoBean infoBean = session.get(EmployeeInfoBean.class, 1);
-				log.info("Employee Details ===>"+infoBean.toString());
+				
+				Transaction transaction = session.beginTransaction();
+				session.save(bean);
+				transaction.commit();
 				
 				//5. Close the session
 				session.close();

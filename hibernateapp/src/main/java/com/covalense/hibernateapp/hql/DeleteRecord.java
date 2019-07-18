@@ -11,8 +11,7 @@ import lombok.extern.java.Log;
 @Log
 public class DeleteRecord {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();		
+		Session session = HibernateUtil.openSession();		
 		String hql= "delete from EmployeeInfoBean where id=:eid";
 		Query query = session.createQuery(hql);
 		query.setParameter("eid", 18);

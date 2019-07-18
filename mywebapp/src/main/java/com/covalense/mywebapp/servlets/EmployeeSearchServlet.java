@@ -51,6 +51,7 @@ public class EmployeeSearchServlet extends HttpServlet {
 		} else {
 			out.print("<HTML>");
 			out.print("<BODY>");
+			out.print("<BR>");
 			out.print("<span style=\"color: blue\"> Employee found ...</span>");
 			out.print("<BR>");
 			out.print("<BR>Id is " + bean.getId());
@@ -69,6 +70,30 @@ public class EmployeeSearchServlet extends HttpServlet {
 			out.print("</BODY>");
 			out.print("</HTML>");
 		}
+		
+		//Get the object from Forward Servlet
+		/* EmployeeInfoBean empInfo = (EmployeeInfoBean) req.getAttribute("info"); */
+		
+		EmployeeInfoBean empInfo = (EmployeeInfoBean) ctx.getAttribute("info");
+		if(empInfo==null) {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("<span style=\"color: blue\"> Employee Object not found !!!</span>");
+			out.print("</BODY>");
+			out.print("</HTML>");
+		}else {
+			out.print("<HTML>");
+			out.print("<BODY>");
+			out.print("<span style=\"color: blue\"> Employee Object found ...</span>");
+			out.print("<BR>");
+			out.print("<BR>Id is " + empInfo.getId());
+			out.print("<BR>name is " + empInfo.getName());
+			out.print("<BR>phone is " + empInfo.getPhone());
+			out.print("<BR>Email is " + empInfo.getEmail());
+			out.print("</BODY>");
+			out.print("</HTML>");
+		}
+		
 	}
 
 }// End of class

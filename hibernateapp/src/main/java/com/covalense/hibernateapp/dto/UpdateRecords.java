@@ -17,8 +17,7 @@ public class UpdateRecords {
 	
 	public static void main(String[] args) {
 		
-		SessionFactory factory = HibernateUtil.buildSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		EmployeeInfoBean updateInfo = session.get(EmployeeInfoBean.class, 1);
 		
 		updateInfo.setSalary(65000);

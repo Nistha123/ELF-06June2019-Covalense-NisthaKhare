@@ -4,26 +4,35 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.covalense.hibernateapp.onetoone.EmployeeInfoBean;
+import com.covalense.hibernateapp.onetoone.EmployeeOtherInfoBean;
+
+import lombok.Builder;
+
 public class HibernateUtil {
 	static SessionFactory factory =null;
 
-	public static SessionFactory buildSessionFactory() {
+	private static SessionFactory buildSessionFactory() {
 
-		Configuration cfg = new Configuration();
-		cfg.configure("hibernate.cfg.xml");
-	    factory = cfg.buildSessionFactory();
-	    return factory ;
+		return new Configuration().configure("hibernate.cfg.xml").
+				addAnnotatedClass(EmployeeInfoBean.class).
+				addAnnotatedClass(EmployeeOtherInfoBean.class).
+				buildSessionFactory();
 
+	}
+	private static SessionFactory getSessionFactory() {
+		if(factory==null) {		
+			factory = buildSessionFactory();		
+		}
+		return factory;
 	}
 	
-	public static SessionFactory getSessionFactory() {
-		if(factory==null) {
-			return buildSessionFactory();
-		}
-		else {
-			return factory;
-		}
+	public static Session openSession() {
+		
+		return getSessionFactory().openSession();
+		
 	}
+
 
 
 }

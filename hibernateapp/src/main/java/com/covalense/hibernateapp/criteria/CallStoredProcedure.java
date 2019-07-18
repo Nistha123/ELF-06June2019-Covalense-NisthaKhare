@@ -15,8 +15,7 @@ import lombok.extern.java.Log;
 @Log
 public class CallStoredProcedure {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		StoredProcedureQuery query = session.createStoredProcedureQuery("SelectAllEmpDetails",EmployeeInfoBean.class);
 		
 		List<EmployeeInfoBean> empList =  query.getResultList();

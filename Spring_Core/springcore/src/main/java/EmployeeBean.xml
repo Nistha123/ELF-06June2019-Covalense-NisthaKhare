@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="empbean" class="com.covalense.springcore.beans.EmployeeInfoBean" scope="prototype">
+    <property name="id" value="11"></property>
+    <property name="name" value="Nistha"></property>
+     <property name="departmentInfoBean" ref="deptbean"></property>
+    </bean>
+    
+    <bean id="deptbean" class="com.covalense.springcore.beans.DepartmentInfoBean">
+    <property name="deptId" value="101"></property>
+    <property name="deptName" value="HR"></property>
+    </bean>
+
+</beans>

@@ -16,8 +16,7 @@ import lombok.extern.java.Log;
 @Log
 public class GetDetailsUsingRestrictions {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		Criteria criteria = session.createCriteria(EmployeeInfoBean.class).add( Restrictions.gt("salary", 10000));		
 		List<EmployeeInfoBean> empl = criteria.list();
 		

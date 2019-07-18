@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.ToString;
@@ -15,6 +16,7 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 @ToString
+@Builder
 public class EmployeeData {
 	
 	private int id;

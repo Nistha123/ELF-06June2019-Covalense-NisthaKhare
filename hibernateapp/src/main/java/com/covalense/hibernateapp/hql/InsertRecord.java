@@ -12,8 +12,7 @@ import lombok.extern.java.Log;
 @Log
 public class InsertRecord {
 	public static void main(String[] args) {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.openSession();
+		Session session = HibernateUtil.openSession();
 		String hql = "insert into EmployeeNewInfo(eid,ename,email) select id,name,email from EmployeeInfoBean ";
 		
 		Transaction transaction = null;
