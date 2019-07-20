@@ -31,6 +31,8 @@ public class EmployeeInfoBean implements Serializable{
 	private String email;
 	@Column(name="password")
 	private String password;
+	@Column(name="confirm_password")
+	private String confirmPassword;
 	@Column(name="Designation")
 	private String designation;
 	@Column(name="DOB")

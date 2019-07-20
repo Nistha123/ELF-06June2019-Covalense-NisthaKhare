@@ -23,7 +23,7 @@ public class EmployeeHibernateDAOImpl implements EmployeeDAO{
 		List<EmployeeInfoBean> beanList = queryBean.list();
 		
 		for (EmployeeInfoBean bean : beanList) {
-			log.info("Id is " + bean.getId());
+			  log.info("Id is " + bean.getId());
 			  log.info("name is " + bean.getName());
 			  log.info("phone is " + bean.getPhone());
 			  log.info("Age is " + bean.getAge()); 
