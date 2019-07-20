@@ -1,16 +1,26 @@
 package com.covalense.hibernateapp.dto;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.Session;
 
 import lombok.Data;
 
 @Entity
 @Table(name="employee_otherinfo")
 @Data
-public class EmployeeOtherInfoBean {
+public class EmployeeOtherInfoBean implements Serializable{
+	
+	@Id
+	@Column(name = "id")
+	private int id;
 	@Column(name="ismarried")
 	private boolean ismarried;  
 	@Column(name="pan")
@@ -32,10 +42,7 @@ public class EmployeeOtherInfoBean {
 	@Column(name="mother_nm")
 	private String mother_name;	
 	@Column(name="spouse_nm")
-	private String spouse_name;	
-	@Id
-	@Column(name="id ")
-	private int id	;		
+	private String spouse_name;		
 	@Column(name="Passport")
 	private long passport;
 	@Column(name="Adhar")

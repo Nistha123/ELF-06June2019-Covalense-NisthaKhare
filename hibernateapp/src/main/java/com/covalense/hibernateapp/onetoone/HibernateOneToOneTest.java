@@ -18,12 +18,12 @@ public class HibernateOneToOneTest {
 	public static void main(String[] args){
 		//Prepare the data
 		int id = 30;
-		EmployeeInfoBean data = PrepareDataUtil.prepareData(id);
+		EmployeeInfoBeanone data = PrepareDataUtil.prepareData(id);
 		save(data);
 		
 	}//End of main
 	
-	private static void save(EmployeeInfoBean data) {
+	private static void save(EmployeeInfoBeanone data) {
 		Transaction transaction=null;	
 		try(Session session = HibernateUtil.openSession()){
 			 transaction = session.beginTransaction();

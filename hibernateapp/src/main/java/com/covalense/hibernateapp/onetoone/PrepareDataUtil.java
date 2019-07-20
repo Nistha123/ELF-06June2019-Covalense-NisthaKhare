@@ -12,7 +12,7 @@ public class PrepareDataUtil {
 	
 	private PrepareDataUtil() {}
 	
-	public static EmployeeInfoBean prepareData(int id) {
+	public static EmployeeInfoBeanone prepareData(int id) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		Date dateDOB = null;
 		try {
@@ -27,8 +27,8 @@ public class PrepareDataUtil {
 			log.severe(Arrays.toString(e.getStackTrace()));
 		}
 		
-		EmployeeInfoBean empinfo = new EmployeeInfoBean();
-		empinfo.setId(id);
+		EmployeeInfoBeanone empinfo = new EmployeeInfoBeanone();
+		empinfo.setId(1);
 		empinfo.setName("Nistha");
 		empinfo.setAge(25);
 		empinfo.setGender("Female");
@@ -43,7 +43,7 @@ public class PrepareDataUtil {
 		empinfo.setManager_ID(12);
 		
 		EmployeeOtherInfoBean otherInfo = new EmployeeOtherInfoBean();
-		otherInfo.setId(1);
+		//otherInfo.set;
 		otherInfo.setIsmarried(false);
 		otherInfo.setPan("CMFDG2341k");
 		otherInfo.setBlood_grp("A+");

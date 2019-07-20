@@ -29,7 +29,7 @@ public class CallStoredProcedure {
 		 * 
 		 * for (Object[] empDet : empList) {
 		 * 
-		 * log.info("Id is :" + empDet[0]); log.info("Name is :" + empDet[1]);
+		 * log.info("Id is :" + empDet[0]	); log.info("Name is :" + empDet[1]);
 		 * log.info("Age is :" +empDet[2]);
 		 * 
 		 * }

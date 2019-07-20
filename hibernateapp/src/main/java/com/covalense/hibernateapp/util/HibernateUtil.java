@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.covalense.hibernateapp.onetoone.EmployeeInfoBean;
+import com.covalense.hibernateapp.onetoone.EmployeeInfoBeanone;
 import com.covalense.hibernateapp.onetoone.EmployeeOtherInfoBean;
 
 import lombok.Builder;
@@ -15,7 +15,7 @@ public class HibernateUtil {
 	private static SessionFactory buildSessionFactory() {
 
 		return new Configuration().configure("hibernate.cfg.xml").
-				addAnnotatedClass(EmployeeInfoBean.class).
+				addAnnotatedClass(EmployeeInfoBeanone.class).
 				addAnnotatedClass(EmployeeOtherInfoBean.class).
 				buildSessionFactory();
 
