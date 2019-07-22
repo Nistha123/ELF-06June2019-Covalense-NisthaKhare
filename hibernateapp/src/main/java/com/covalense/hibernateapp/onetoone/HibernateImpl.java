@@ -44,6 +44,23 @@ public class HibernateImpl {
 		session.close();
 	}//end of createEmployee()
 	
+	public void createEmployee(EmployeeInfoBeanone beanone) {
+		Session session = factory.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(beanone);
+		transaction.commit();
+		session.close();
+		
+	}//end of createEmployee()
+	
+	public EmployeeInfoBeanone getEmployee(int id) {
+		Session session = factory.openSession();
+		EmployeeInfoBeanone infoBeanone = new EmployeeInfoBeanone();
+		infoBeanone = session.get(EmployeeInfoBeanone.class, id);
+		return infoBeanone;
+		
+	}//end of getEmployee()
+	
 	public void createTraining(TrainingInfoBean trainingInfoBean) {
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();

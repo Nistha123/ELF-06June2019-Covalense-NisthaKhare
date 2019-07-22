@@ -61,8 +61,8 @@ public class HibernateTestTwo {
 		empinfo.setDob(dateDOB);
 		empinfo.setAcnt_no(98798089);
 		empinfo.setJoining_date(dateJoin); 
-		empinfo.setDept_ID(30);
-		empinfo.setManager_ID(12);
+	//	empinfo.setDept_ID(30);
+		//empinfo.setManager_ID(12);
 		
 		EmployeeInfoBeanone empinfo2 = new EmployeeInfoBeanone();
 		empinfo2.setId(6);
@@ -76,8 +76,8 @@ public class HibernateTestTwo {
 		empinfo2.setDob(dateDOB);
 		empinfo2.setAcnt_no(98798089);
 		empinfo2.setJoining_date(dateJoin); 
-		empinfo2.setDept_ID(30);
-		empinfo2.setManager_ID(12);
+		//empinfo2.setDept_ID(30);
+		//empinfo2.setManager_ID(12);
 		
 		EmployeeInfoBeanone empinfo3 = new EmployeeInfoBeanone();
 		empinfo3.setId(7);
@@ -91,8 +91,8 @@ public class HibernateTestTwo {
 		empinfo3.setDob(dateDOB);
 		empinfo3.setAcnt_no(98798089);
 		empinfo3.setJoining_date(dateJoin); 
-		empinfo3.setDept_ID(30);
-		empinfo3.setManager_ID(12);
+	//	empinfo3.setDept_ID(30);
+		//empinfo3.setManager_ID(12);
 		
 		TrainingInfoBean trainingInfoBean = new TrainingInfoBean();
 		trainingInfoBean.setCourseid(101);
