@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan
+		base-package="com.covalense.springcore_assignment"></context:component-scan>
+
+	<bean id="dell"
+		class="com.covalense.springcore_assignment.beans.Dell" >
+		<property value="DELL" name="brand" />
+		<property value="Windows 10 home" name="os" />
+		<property value="8" name="ram" />
+		<property value="Black" name="color" />
+		<property value="1.6" name="weight" />
+		<property value="49399.49" name="cost" />
+	</bean>
+
+	<bean id="hp" class="com.covalense.springcore_assignment.beans.HP" >
+		<property value="HP" name="brand" />
+		<property value="Windows 10 pro" name="os" />
+		<property value="8" name="ram" />
+		<property value="Silver" name="color" />
+		<property value="2.1" name="weight" />
+		<property value="59999.99" name="cost" />
+	</bean>
+	<!-- <bean id="pen" class="com.covalense.springcore_assignment.beans.PenDrive">
+		<property value="200" name="capacity" />
+		<property value="10.9" name="writingSpeed" />
+		<property value="8.9" name="readingSpeed" />
+	</bean>
+	<bean id="hard" class="com.covalense.springcore_assignment.beans.HardDisk" primary="true">
+		<property value="300" name="capacity" />
+		<property value="11.9" name="writingSpeed" />
+		<property value="9.9" name="readingSpeed" />
+	</bean>
+ -->
+</beans>
