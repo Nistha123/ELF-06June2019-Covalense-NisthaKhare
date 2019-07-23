@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.covalense.emp.dto.EmployeeInfoBean;
+import com.covalense.emp.dto.EmployeeOtherInfoBean;
 
 
 
@@ -18,9 +19,10 @@ public class HibernateUtil {
 	private static SessionFactory buildSessionFactory() {
 //		 new Configuration().configure();
 //	    factory =  new Configuration().buildSessionFactory();
-	    return  new Configuration()
+	    return new Configuration()
 	    		.configure()
 	    		.addAnnotatedClass(EmployeeInfoBean.class)
+	    		.addAnnotatedClass(EmployeeOtherInfoBean.class)
 	    		.buildSessionFactory() ;
 
 	}

@@ -158,5 +158,11 @@ public final class EmployeeJDBCDAOImpl implements EmployeeDao
 		return null;
 	}
 
+	@Override
+	public List<EmployeeInfoBean> searchLikeEmployee(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }// end of class

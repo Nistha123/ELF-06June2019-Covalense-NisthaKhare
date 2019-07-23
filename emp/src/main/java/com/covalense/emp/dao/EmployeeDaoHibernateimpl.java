@@ -20,7 +20,7 @@ import lombok.extern.java.Log;
 
 @Log
 public class EmployeeDaoHibernateimpl implements EmployeeDao {
-	
+
 	@Override
 	public List<EmployeeInfoBean> getAllEmployeeInfo(String id) {
 		Session session = HibernateUtil.openSession();
@@ -36,52 +36,68 @@ public class EmployeeDaoHibernateimpl implements EmployeeDao {
 		 * List<EmployeeInfoBean> results = query.getResultList(); session.close();
 		 * return new ArrayList<EmployeeInfoBean>(results);
 		 */
-		String hql = "from EmployeeInfoBean where str(id) like '"+ id + "%'";
+		String hql = "from EmployeeInfoBean where str(id) like '" + id + "%'";
 		Query query = session.createQuery(hql);
 		List<EmployeeInfoBean> lstBean = query.list();
 		return lstBean;
 
-		}
-
+	}
 
 	@Override
 	public List<EmployeeInfoBean> getAllEmployee() {
 		Session session = HibernateUtil.openSession();
 		EmployeeInfoBean bean;
-		
-		  String query = "from EmployeeInfoBean"; 
-		  Query<EmployeeInfoBean> empList = session.createQuery(query);
-   		   List<EmployeeInfoBean> list = empList.list();
-		
+
+		String query = "from EmployeeInfoBean";
+		Query<EmployeeInfoBean> empList = session.createQuery(query);
+		List<EmployeeInfoBean> list = empList.list();
+
 		for (EmployeeInfoBean empbean : list) {
 			log.info("Id is " + empbean.getId());
-			  log.info("name is " + empbean.getName());
-			  log.info("phone is " + empbean.getPhone());
-			  log.info("Age is " + empbean.getAge()); 
-			  log.info("Salary is "+ empbean.getSalary());
-			  log.info("Account no is " + empbean.getAcnt_no());
-			  log.info("DOB is " + empbean.getDob());
-			  log.info("Designation is " + empbean.getDesignation()); 
-			  log.info("Dept ID is " + empbean.getDept_ID());
-			  log.info("Manager ID is " + empbean.getManager_ID());
-			
+			log.info("name is " + empbean.getName());
+			log.info("phone is " + empbean.getPhone());
+			log.info("Age is " + empbean.getAge());
+			log.info("Salary is " + empbean.getSalary());
+			log.info("Account no is " + empbean.getAcnt_no());
+			log.info("DOB is " + empbean.getDob());
+			log.info("Designation is " + empbean.getDesignation());
+			log.info("Dept ID is " + empbean.getDept_ID());
+			log.info("Manager ID is " + empbean.getManager_ID());
+
 		}
+		return list;
+	}
+
+	public List<EmployeeInfoBean> searchLikeEmployee(String id) {
+		Session session = HibernateUtil.openSession();
+		EmployeeInfoBean bean;
+
+		String query = "from EmployeeInfoBean where str(id) like :id";
+
+		Query empList = session.createQuery(query);
+		empList.setParameter("id", id+"%");
+		List<EmployeeInfoBean> list = empList.list();
+
 		return list;
 	}
 
 	@Override
 	public boolean createEmployee(EmployeeInfoBean bean) {
+		Session session = null;
 		Transaction txn = null;
-		try (Session session = HibernateUtil.openSession();) {
+		try {
+			session = HibernateUtil.openSession();
+			txn=session.beginTransaction();
 			session.saveOrUpdate(bean);
 			txn.commit();
 			return true;
-		}catch (Exception e) {
-			log.severe(Arrays.toString(e.getStackTrace()));
-			if(txn!=null) {
+		} catch (Exception 	e) {
+			e.getStackTrace();
+			if (txn != null) {
 				txn.rollback();
 			}
 		}
+		session.close();
 
 		return false;
 	}
@@ -89,7 +105,7 @@ public class EmployeeDaoHibernateimpl implements EmployeeDao {
 	@Override
 	public EmployeeInfoBean getEmployeeInfo(int id) {
 		EmployeeInfoBean readInfo;
-		try(Session session = HibernateUtil.openSession();) {
+		try (Session session = HibernateUtil.openSession();) {
 			readInfo = session.get(EmployeeInfoBean.class, id);
 		}
 		return readInfo;
@@ -97,7 +113,7 @@ public class EmployeeDaoHibernateimpl implements EmployeeDao {
 
 	@Override
 	public EmployeeInfoBean getEmployeeInfo(String id) {
-		
+
 		return getEmployeeInfo(Integer.parseInt(id));
 	}
 

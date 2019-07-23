@@ -13,5 +13,5 @@ public interface EmployeeDao {
 	boolean updateEmployeeInfo(EmployeeInfoBean bean);
 	boolean deleteEmployeeInfo(int id);
 	boolean deleteEmployeeInfo(String id);
-	
+	public List<EmployeeInfoBean> searchLikeEmployee(String id);
 }//End of interface

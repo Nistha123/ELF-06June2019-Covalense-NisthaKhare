@@ -3,7 +3,18 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>loginjsp</servlet-name>
+		<jsp-file>/LoginFail.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>showjsp</servlet-name>
+		<jsp-file>/ShowEmployee.jsp</jsp-file>
+	</servlet>
 	<servlet>
 		<servlet-name>EmployeeDataServlet</servlet-name>
 		<display-name>EmployeeDataServlet</display-name>
@@ -17,8 +28,20 @@
 		<servlet-class>com.covalense.emp.servlet.EmployeeListDisplayServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
+  <servlet-name>dispatcher</servlet-name>
+  <url-pattern>/</url-pattern>
+  </servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>EmployeeDataServlet</servlet-name>
 		<url-pattern>/EmployeeDataServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>loginjsp</servlet-name>
+		<url-pattern>/loginfail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>showjsp</servlet-name>
+		<url-pattern>/showemp</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>EmployeeListDisplayServlet</servlet-name>
