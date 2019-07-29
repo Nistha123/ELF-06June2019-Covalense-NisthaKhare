@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <div id="mydiv2"></div>
+    <script type="text/babel">
+        function Test(){        
+                return <h1>heloooo</h1>
+           
+        }
+        function Greet(){
+            return <h1>Hello Greet!!</h1> 
+        }
+        ReactDOM.render(<Test/>, document.getElementById('mydiv'))
+        ReactDOM.render(<Greet/>, document.getElementById('mydiv2'))
+        </script>
+
+</body>
+
+</html>

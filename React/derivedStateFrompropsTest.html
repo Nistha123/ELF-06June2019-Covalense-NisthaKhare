@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Header extends React.Component{
+                constructor(props){
+                super(props);
+                this.state = {
+                    favoritecolor : "blue"
+                };
+                }
+            //    static getDerivedStateFromProps(props,state){
+            //        return {favoritecolor:props.favcol};
+            //    }
+
+            shouldComponentUpdate(){
+                return true;
+            }
+            changeColor = () =>{
+                 this.setState({favoritecolor:"Black"})
+             }
+             render(){
+               return(
+                   <div>
+                   <h1>My favorite color is {this.state.favoritecolor}</h1>
+                   <button type="button" onClick={this.changeColor}>Change Color</button>
+                   </div>
+               );
+           }
+              }
+              ReactDOM.render(<Header favcol="Red"/>, document.getElementById('root'))
+            </script>
+</body>
+
+</html>
