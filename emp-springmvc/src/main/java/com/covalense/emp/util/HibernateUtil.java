@@ -10,8 +10,8 @@ import lombok.Data;
 
 public class HibernateUtil {
 	@Autowired
-	private SessionFactory sessionfactory;
-	public Session openSession() {
+	private static SessionFactory sessionfactory;
+	public static Session openSession() {
 		
 		return sessionfactory.openSession();
 	}//end of method

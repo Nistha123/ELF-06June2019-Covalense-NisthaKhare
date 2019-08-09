@@ -89,15 +89,15 @@ public final class EmployeeJDBCDAOImpl implements EmployeeDao
 				bean.setName(rs.getString("NAME"));
 				bean.setAge(rs.getInt("AGE"));
 				bean.setGender(rs.getString("GENDER"));
-				bean.setSalary(rs.getDouble("SALARY"));
-				bean.setPhone(rs.getInt("PHONE"));
+				bean.setSalary(rs.getInt("SALARY"));
+				bean.setPhone(rs.getLong("PHONE"));
 			//	bean.setJoining_date(rs.getDate("JOINING_DATE"));
-				bean.setAcnt_no(rs.getInt("ACCNT_NO"));
+				bean.setAcnt_no(rs.getLong("ACCNT_NO"));
 				bean.setEmail(rs.getString("EMAIL"));
 				bean.setDesignation(rs.getString("DESIGNATION"));
 			//	bean.setDob(rs.getDate("DOB"));
-				bean.setDept_ID(rs.getInt("DEPT_ID"));
-				bean.setManager_ID(rs.getInt("MANAGER_ID"));
+				//bean.setDept_ID(rs.getInt("DEPT_ID"));
+			//	bean.setManager_ID(rs.getInt("MANAGER_ID"));
 				
 			} // end of while
 			return bean;

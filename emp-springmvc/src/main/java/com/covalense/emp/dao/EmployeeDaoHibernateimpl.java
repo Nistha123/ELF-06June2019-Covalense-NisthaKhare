@@ -45,8 +45,8 @@ public class EmployeeDaoHibernateimpl implements EmployeeDao {
 			log.info("Account no is " + empbean.getAcnt_no());
 			//log.info("DOB is " + empbean.getDob());
 			log.info("Designation is " + empbean.getDesignation());
-			log.info("Dept ID is " + empbean.getDept_ID());
-			log.info("Manager ID is " + empbean.getManager_ID());
+			//log.info("Dept ID is " + empbean.getDept_ID());
+			//log.info("Manager ID is " + empbean.getManager_ID());
 
 		}
 		return list;
